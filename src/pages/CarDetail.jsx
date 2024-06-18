@@ -33,9 +33,14 @@ function CarDetail() {
             <h2>{car.brand} {car.model}</h2>
             <p><b>Цена: {car.price} ₽</b></p>
             <div className="images-container">
-                {car.images.map((image) => (
-                    <img key={image.id} src={image.image} alt={`${car.brand} ${car.model}`} />
-                ))}
+                {car.images && car.images.length > 0 ? (
+                    car.images.map((image) => (
+                        <img key={image.id} src={image.image} alt={`${car.brand} ${car.model}`} />
+                    ))
+                ) : (
+                    <p>Изображений нет</p>
+                )}
+
             </div>
             <p>Тариф: {car.tarif.join(', ') || 'Нет тарифов'}</p>
         </Container>

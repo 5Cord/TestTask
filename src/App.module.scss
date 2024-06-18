@@ -1,0 +1,19 @@
+$widthContainer: 90%;
+
+.selectForm {
+    width: $widthContainer;
+    margin: 0 auto;
+}
+
+.container {
+    width: $widthContainer;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.netting {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: center;
+}

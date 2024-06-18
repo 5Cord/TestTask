@@ -91,25 +91,24 @@ function App() {
                 <Route path="/" element={
                     <div className="App">
                         <div className={cl.container}>
-
+                            <h4>Подобрать авто:</h4>
                             <div className={cl.selectForm}>
-                                <h5>Марка</h5>
-                                <h5>Модель</h5>
-                                <h5>Тариф</h5>
-                            </div>
-                            <div className={cl.selectForm}>
-                                <Select className={cl.select}
+                                <Select
+                                    className={cl.select}
                                     isMulti
                                     options={filters.brands}
                                     onChange={(selected) => handleFilterChange(selected, 'brands')}
                                     value={filters.brands.filter(brand => selectedFilters.brands.includes(brand.value))}
+                                    placeholder="Марка"
                                 />
+
                                 <Select
                                     className={cl.select}
                                     isMulti
                                     options={getModelOptions()}
                                     onChange={(selected) => handleFilterChange(selected, 'models')}
                                     value={getModelOptions().filter(model => selectedFilters.models.includes(model.value))}
+                                    placeholder="Модель"
                                 />
 
                                 <Select
@@ -118,7 +117,9 @@ function App() {
                                     options={filters.tarif}
                                     onChange={(selected) => handleFilterChange(selected, 'tarif')}
                                     value={filters.tarif.filter(tarif => selectedFilters.tarif.includes(tarif.value))}
+                                    placeholder="Тариф"
                                 />
+
                             </div>
                             <div className={cl.header_title}>
                                 <h1>АРЕНДА АВТОМОБИЛЕЙ</h1>

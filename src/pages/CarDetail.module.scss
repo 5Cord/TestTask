@@ -1,9 +1,7 @@
-/* Убираем обводку у миниатюр в карусели */
 .carousel .thumb.selected,
 .carousel .thumb:hover {
     border: 3px solid #ffffff;
 }
-
 
 .goToBack {
     position: fixed;
@@ -14,7 +12,6 @@
 
 .slick-dots {
     bottom: -50px;
-
 }
 
 .sliderContainer {

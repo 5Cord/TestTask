@@ -1,0 +1,16 @@
+.selectForm {
+    display: flex;
+    gap: 50px;
+    margin-bottom: 50px;
+    justify-content: space-around;
+}
+
+.select {
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+a {
+    text-decoration: none !important;
+}
